@@ -17,7 +17,7 @@
       <#list [po_index, po_index+1] as idx><#rt/>
         <#if idx lt columns?size>
           <a-col :span="12">
-            <a-form-item
+            <a-form-org.jit.item
               :labelCol="labelCol"
               :wrapperCol="wrapperCol"
               label="${columns[idx].filedComment}">
@@ -38,7 +38,7 @@
             <#else>
               <a-input placeholder="请输入${columns[idx].filedComment}" v-decorator="['${columns[idx].fieldName}', <#if columns[idx].nullable =='N'>validatorRules.${columns[idx].fieldName} <#else>{}</#if>]"/>
             </#if>
-            </a-form-item>
+            </a-form-org.jit.item>
           </a-col>
         </#if>
       </#list><#rt/>

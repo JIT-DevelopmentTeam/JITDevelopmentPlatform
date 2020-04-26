@@ -336,13 +336,13 @@ function chart1() {
 
     var RealData = [];
     var borderData = [];
-    data.map((item, index) => {
-        var newobj = deepCopy(item);
-        var newobj1 = deepCopy(item);
+    data.map((org.jit.item, index) => {
+        var newobj = deepCopy(org.jit.item);
+        var newobj1 = deepCopy(org.jit.item);
         RealData.push(newobj);
         borderData.push(newobj1);
     });
-    RealData.map((item, index) => {
+    RealData.map((org.jit.item, index) => {
         item.itemStyle = {
             normal: {
                 color: {
@@ -363,7 +363,7 @@ function chart1() {
             }
         }
     });
-    borderData.map((item, index) => {
+    borderData.map((org.jit.item, index) => {
         item.itemStyle = {
             normal: {
                 color: {
@@ -386,7 +386,7 @@ function chart1() {
     });
     var option = {
         tooltip: {
-            trigger: 'item',
+            trigger: 'org.jit.item',
             //            position: ['30%', '50%'],
             confine: true,
             formatter: "{a} <br/>{b}: {c} ({d}%)"
@@ -595,7 +595,7 @@ function chart2(chartType) {
                     mapType: '广东',
                     selectedMode: 'multiple',
                     tooltip: {
-                        trigger: 'item',
+                        trigger: 'org.jit.item',
                         formatter: '{b}<br/>{c} (件)'
                     },
                     itemStyle: {
@@ -1785,7 +1785,7 @@ function chart4(data, type, chartType) {
 
     var option = {
         tooltip: {
-            trigger: 'item',
+            trigger: 'org.jit.item',
         },
         geo: {
             map: 'china',

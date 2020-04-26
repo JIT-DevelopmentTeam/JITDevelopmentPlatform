@@ -35,6 +35,11 @@
 			<groupId>org.jeecgframework.boot</groupId>
 			<artifactId>jeecg-boot-base-common</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>8.2.0.jre8</version>
+		</dependency>
 	</dependencies>
 	
 	<build>

@@ -344,7 +344,7 @@ $(document).ready(function ()
 		},
 		calculable : false,
 		tooltip : {
-			trigger: 'item',
+			trigger: 'org.jit.item',
 			textStyle: {
 				color:'#FFF',
 				fontSize:24
@@ -706,7 +706,7 @@ $(document).ready(function ()
 			left: 100
 		},
 		tooltip: {
-			trigger: 'item',
+			trigger: 'org.jit.item',
 			textStyle: {
 				color: '#B7E1FF',
 				fontSize:24
@@ -922,7 +922,7 @@ $(document).ready(function ()
 			{
 				return (d.value!=null && d.value>=0);
 			},
-			trigger: 'item',
+			trigger: 'org.jit.item',
 			formatter:function(d){
 				return (d.value>=0)?d.name+'</br>战略力度：'+(d.value).toFixed(2):'';
 			},
@@ -1011,7 +1011,7 @@ $(document).ready(function ()
 	map_option = {
 		title : {show:false},
 		tooltip : {
-			trigger: 'item',
+			trigger: 'org.jit.item',
 			formatter: function(params) {
                 if (typeof(params.value)[2] == "undefined") {
                     return params.name + ' : ' + params.value;

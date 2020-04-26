@@ -20,7 +20,7 @@
       </a-upload>
       <a-dropdown v-if="selectedRowKeys.length > 0">
         <a-menu slot="overlay">
-          <a-menu-item key="1" @click="batchDel"><a-icon type="delete"/>删除</a-menu-item>
+          <a-menu-org.jit.item key="1" @click="batchDel"><a-icon type="delete"/>删除</a-menu-org.jit.item>
         </a-menu>
         <a-button style="margin-left: 8px"> 批量操作 <a-icon type="down" /></a-button>
       </a-dropdown>
@@ -70,11 +70,11 @@
           <a-dropdown>
             <a class="ant-dropdown-link">更多 <a-icon type="down" /></a>
             <a-menu slot="overlay">
-              <a-menu-item>
+              <a-menu-org.jit.item>
                 <a-popconfirm title="确定删除吗?" @confirm="() => handleDelete(record.id)">
                   <a>删除</a>
                 </a-popconfirm>
-              </a-menu-item>
+              </a-menu-org.jit.item>
             </a-menu>
           </a-dropdown>
         </span>
@@ -203,13 +203,13 @@
         })
       },
       getDataByResult(result){
-        return result.map(item=>{
+        return result.map(org.jit.item=>{
           //判断是否标记了带有子节点
-          if(item[this.hasChildrenField]=='1'){
-            let loadChild = { id: item.id+'_loadChild', name: 'loading...', isLoading: true }
-            item.children = [loadChild]
+          if(org.jit.item[this.hasChildrenField]=='1'){
+            let loadChild = { id: org.jit.item.id+'_loadChild', name: 'loading...', isLoading: true }
+            org.jit.item.children = [loadChild]
           }
-          return item
+          return org.jit.item
         })
       },
       handleExpand(expanded, record){

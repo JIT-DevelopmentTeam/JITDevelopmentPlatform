@@ -206,7 +206,7 @@ function merge(target, source, overwrite) {
   return target;
 }
 /**
- * @param {Array} targetAndSources The first item is target, and the rests are source.
+ * @param {Array} targetAndSources The first org.jit.item is target, and the rests are source.
  * @param {boolean} [overwrite=false]
  * @return {*} target
  */
@@ -2802,7 +2802,7 @@ function pushTokens(block, str, styleName) {
       var tokens = (lines[lines.length - 1] || (lines[0] = {
         tokens: []
       })).tokens; // Consider cases:
-      // (1) ''.split('\n') => ['', '\n', ''], the '' at the first item
+      // (1) ''.split('\n') => ['', '\n', ''], the '' at the first org.jit.item
       // (which is a placeholder) should be replaced by new token.
       // (2) A image backage, where token likes {a|}.
       // (3) A redundant '' will affect textAlign in line.
@@ -7147,7 +7147,7 @@ echarts.registerLayout(function (ecModel, api) {
         });
 
         function onWordCloudDrawn(e) {
-            var item = e.detail.item;
+            var item = org.jit.item;
             if (e.detail.drawn && seriesModel.layoutInstance.ondraw) {
                 e.detail.drawn.gx += gridRect.x / gridSize;
                 e.detail.drawn.gy += gridRect.y / gridSize;
@@ -7783,7 +7783,7 @@ var OTHER_DIMS = {
  *
  * @param {Array.<string>} sysDims Necessary dimensions, like ['x', 'y'], which
  *      provides not only dim template, but also default order.
- *      `name` of each item provides default coord name.
+ *      `name` of each org.jit.item provides default coord name.
  *      [{dimsDef: []}, ...] can be specified to give names.
  * @param {Array} data Data list. [[1, 2, 3], [2, 3, 4]].
  * @param {Object} [opt]
@@ -7795,7 +7795,7 @@ var OTHER_DIMS = {
  *                      extraPrefix + 0, extraPrefix + extraBaseIndex + 1 ...
  *                      If not specified, extra dim names will be:
  *                      extraPrefix, extraPrefix + 0, extraPrefix + 1 ...
- * @param {number} [opt.dimCount] If not specified, guess by the first data item.
+ * @param {number} [opt.dimCount] If not specified, guess by the first data org.jit.item.
  * @return {Array.<Object>} [{
  *      name: string mandatory,
  *      coordDim: string mandatory,
@@ -9639,7 +9639,7 @@ function doLeaveHover(el) {
 
 function setElementHoverStl(el, hoverStl) {
   // If element has sepcified hoverStyle, then use it instead of given hoverStyle
-  // Often used when item group has a label element and it's hoverStyle is different
+  // Often used when org.jit.item group has a label element and it's hoverStyle is different
   el.__hoverStl = el.hoverStyle || hoverStl || {};
   el.__hoverStlDirty = true;
 
@@ -14583,7 +14583,7 @@ function _default(orignalBrush) {
         if (shape && (type === 'sector' && shape.startAngle === shape.endAngle || type === 'rect' && (!shape.width || !shape.height))) {
           for (var j = 0; j < shadowTemp.length; j++) {
             // It is save to put shadowTemp static, because shadowTemp
-            // will be all modified each item brush called.
+            // will be all modified each org.jit.item brush called.
             shadowTemp[j][2] = style[shadowTemp[j][0]];
             style[shadowTemp[j][0]] = shadowTemp[j][1];
           }
@@ -15775,7 +15775,7 @@ if (!window.clearImmediate) {
         return;
       }
 
-      settings.hover(info.item, info.dimension, evt);
+      settings.hover(org.jit.item, info.dimension, evt);
 
     };
 
@@ -15785,7 +15785,7 @@ if (!window.clearImmediate) {
         return;
       }
 
-      settings.click(info.item, info.dimension, evt);
+      settings.click(org.jit.item, info.dimension, evt);
       evt.preventDefault();
     };
 
@@ -16221,7 +16221,7 @@ if (!window.clearImmediate) {
       }
     };
 
-    /* putWord() processes each item on the list,
+    /* putWord() processes each org.jit.item on the list,
        calculate it's size and determine it's position, and actually
        put it on the canvas. */
     var putWord = function putWord(item) {

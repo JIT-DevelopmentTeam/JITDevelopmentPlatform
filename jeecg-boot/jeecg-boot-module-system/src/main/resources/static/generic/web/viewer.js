@@ -209,9 +209,9 @@ function watchScroll(viewAreaElement, callback) {
 }
 
 /**
- * Use binary search to find the index of the first item in a given array which
+ * Use binary search to find the index of the first org.jit.item in a given array which
  * passes a given condition. The items are expected to be sorted in the sense
- * that if the condition is true for one item in the array, then it is also true
+ * that if the condition is true for one org.jit.item in the array, then it is also true
  * for all following items.
  *
  * @returns {Number} Index of the first array element to pass the test,

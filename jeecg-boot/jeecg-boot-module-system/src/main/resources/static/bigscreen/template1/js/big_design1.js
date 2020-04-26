@@ -322,7 +322,7 @@ $(document).ready(function ()
 			left: 100
 		},
 		tooltip: {
-			trigger: 'item',
+			trigger: 'org.jit.item',
 			textStyle: {
 				color: '#B7E1FF',
 				fontSize:24
@@ -601,7 +601,7 @@ $(document).ready(function ()
 			}
 		},
 		tooltip : {
-			trigger: 'item'
+			trigger: 'org.jit.item'
 		},
 		legend: {
 			show:false,

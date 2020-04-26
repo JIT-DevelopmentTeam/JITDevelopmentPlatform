@@ -19,7 +19,7 @@
 	</#if>
 	<#if po.queryMode=='single'>
           <#if query_field_no gt 1>  </#if><a-col :xl="6" :lg="7" :md="8" :sm="24">
-            <#if query_field_no gt 1>  </#if><a-form-item label="${po.filedComment}">
+            <#if query_field_no gt 1>  </#if><a-form-org.jit.item label="${po.filedComment}">
 			<#if po.classType=='date'>
 <#assign query_field_date=true>
               <#if query_field_no gt 1>  </#if><j-date placeholder="请选择${po.filedComment}" v-model="queryParam.${po.fieldName}"></j-date>
@@ -39,11 +39,11 @@
 			<#else>
               <#if query_field_no gt 1>  </#if><a-input placeholder="请输入${po.filedComment}" v-model="queryParam.${po.fieldName}"></a-input>
 			</#if>
-            <#if query_field_no gt 1>  </#if></a-form-item>
+            <#if query_field_no gt 1>  </#if></a-form-org.jit.item>
           <#if query_field_no gt 1>  </#if></a-col>
 	<#else>
           <#if query_field_no gt 1>  </#if><a-col :xl="10" :lg="11" :md="12" :sm="24">
-            <#if query_field_no gt 1>  </#if><a-form-item label="${po.filedComment}">
+            <#if query_field_no gt 1>  </#if><a-form-org.jit.item label="${po.filedComment}">
 			<#if po.classType=='date'>
 <#assign query_field_date=true>
               <#if query_field_no gt 1>  </#if><j-date placeholder="请选择开始日期" class="query-group-cust" v-model="queryParam.${po.fieldName}_begin"></j-date>
@@ -59,7 +59,7 @@
               <#if query_field_no gt 1>  </#if><span class="query-group-split-cust"></span>
               <#if query_field_no gt 1>  </#if><a-input placeholder="请输入最大值" class="query-group-cust" v-model="queryParam.${po.fieldName}_end"></a-input>
 			</#if>
-            <#if query_field_no gt 1>  </#if></a-form-item>
+            <#if query_field_no gt 1>  </#if></a-form-org.jit.item>
           <#if query_field_no gt 1>  </#if></a-col>
 	</#if>
 <#assign query_field_no=query_field_no+1>
@@ -103,7 +103,7 @@
       </a-upload>
       <a-dropdown v-if="selectedRowKeys.length > 0">
         <a-menu slot="overlay">
-          <a-menu-item key="1" @click="batchDel"><a-icon type="delete"/>删除</a-menu-item>
+          <a-menu-org.jit.item key="1" @click="batchDel"><a-icon type="delete"/>删除</a-menu-org.jit.item>
         </a-menu>
         <a-button style="margin-left: 8px"> 批量操作 <a-icon type="down" /></a-button>
       </a-dropdown>
@@ -156,11 +156,11 @@
           <a-dropdown>
             <a class="ant-dropdown-link">更多 <a-icon type="down" /></a>
             <a-menu slot="overlay">
-              <a-menu-item>
+              <a-menu-org.jit.item>
                 <a-popconfirm title="确定删除吗?" @confirm="() => handleDelete(record.id)">
                   <a>删除</a>
                 </a-popconfirm>
-              </a-menu-item>
+              </a-menu-org.jit.item>
             </a-menu>
           </a-dropdown>
         </span>

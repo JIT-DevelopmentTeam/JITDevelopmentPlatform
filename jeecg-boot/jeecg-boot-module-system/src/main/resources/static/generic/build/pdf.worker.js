@@ -3454,7 +3454,7 @@ var Catalog = (function CatalogClosure() {
               continue;
             }
             if (!outlineDict.has('Title')) {
-              error('Invalid outline item');
+              error('Invalid outline org.jit.item');
             }
             var dest = outlineDict.get('A');
             if (dest) {
@@ -34741,7 +34741,7 @@ var JpegImage = (function jpegImage() {
             }
           }
           break;
-        case 3: // set value for a zero item
+        case 3: // set value for a zero org.jit.item
           if (component.blockData[offset + z]) {
             component.blockData[offset + z] += (readBit() << successive);
           } else {
@@ -36737,7 +36737,7 @@ var JpxImage = (function JpxImageClosure() {
         encodedData.set(chunk, position);
         position += chunk.length;
       }
-      // decoding the item
+      // decoding the org.jit.item
       var decoder = new ArithmeticDecoder(encodedData, 0, totalLength);
       bitModel.setDecoder(decoder);
 

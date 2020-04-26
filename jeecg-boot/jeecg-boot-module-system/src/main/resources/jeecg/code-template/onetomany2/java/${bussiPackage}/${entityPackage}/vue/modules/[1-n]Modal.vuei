@@ -15,7 +15,7 @@
 <#list subTab.colums as po><#rt/>
 
 <#if po.fieldName !='id'><#rt/>
-        <a-form-item
+        <a-form-org.jit.item
           :labelCol="labelCol"
           :wrapperCol="wrapperCol"
           label="${po.filedComment}"
@@ -36,7 +36,7 @@
           <a-input placeholder="请输入${po.filedComment}" v-decorator="['${po.fieldName}', <#if po.nullable =='N'>validatorRules.${po.fieldName} <#else>{}</#if>]" />
           </#if>
           </#if>
-        </a-form-item>
+        </a-form-org.jit.item>
 </#if>
 </#list>
       </a-form>

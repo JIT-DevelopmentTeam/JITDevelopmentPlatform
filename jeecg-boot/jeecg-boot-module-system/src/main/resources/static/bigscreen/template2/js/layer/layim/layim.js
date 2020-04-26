@@ -559,7 +559,7 @@ xxim.getDates = function(index){
                         str += '<li data-id="'+ datas.data[i].id +'" class="xxim_parentnode">'
                             +'<h5><i class="fa fa-caret-right"></i><span class="xxim_parentname">'+ datas.data[i].name +'</span><em class="xxim_nums">（'+ datas.data[i].nums +'）</em></h5>'
                             +'<ul class="xxim_chatlist">';
-                        item = datas.data[i].item;
+                        item = org.jit.item;
                         for(var j = 0; j < item.length; j++){
                             str += '<li data-id="'+ item[j].id +'" class="xxim_childnode" type="'+ (index === 0 ? 'one' : 'group') +'"><img src="'+ item[j].face +'" class="xxim_oneface"><span class="xxim_onename">'+ item[j].name +'</span></li>';
                         }

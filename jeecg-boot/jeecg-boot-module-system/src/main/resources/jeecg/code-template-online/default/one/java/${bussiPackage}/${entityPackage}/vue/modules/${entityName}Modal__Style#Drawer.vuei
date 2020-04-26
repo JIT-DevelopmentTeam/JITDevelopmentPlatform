@@ -25,7 +25,7 @@
 	<#elseif po.dictField?default("")?trim?length gt 1>
 		<#assign form_field_dictCode="${po.dictField}">
 	</#if>
-        <a-form-item label="${po.filedComment}" :labelCol="labelCol" :wrapperCol="wrapperCol">
+        <a-form-org.jit.item label="${po.filedComment}" :labelCol="labelCol" :wrapperCol="wrapperCol">
 	<#if po.classType =='date'>
 		<#assign form_date=true>
           <j-date placeholder="请选择${po.filedComment}" v-decorator="[ '${po.fieldName}', validatorRules.${po.fieldName}]" :trigger-change="true" style="width: 100%"/>
@@ -63,7 +63,7 @@
 	<#else>
           <a-input v-decorator="[ '${po.fieldName}', validatorRules.${po.fieldName}]" placeholder="请输入${po.filedComment}"></a-input>
     </#if>
-        </a-form-item>
+        </a-form-org.jit.item>
 </#if>
 </#list>    
         

@@ -8,9 +8,9 @@
 <#list columns as po><#rt/>
 <#if po.fieldName !='id' && po_index<= tableVo.searchFieldNum>
           <a-col :xl="6" :lg="7" :md="8" :sm="24">
-            <a-form-item label="${po.filedComment}">
+            <a-form-org.jit.item label="${po.filedComment}">
               <a-input placeholder="请输入${po.filedComment}" v-model="queryParam.${po.fieldName}"></a-input>
-            </a-form-item>
+            </a-form-org.jit.item>
           </a-col>
 </#if>
 </#list>
@@ -34,9 +34,9 @@
       </a-upload>
       <a-dropdown v-if="selectedRowKeys.length > 0">
         <a-menu slot="overlay">
-          <a-menu-item key="1" @click="batchDel">
+          <a-menu-org.jit.item key="1" @click="batchDel">
           <a-icon type="delete"/>删除
-          </a-menu-item>
+          </a-menu-org.jit.item>
         </a-menu>
         <a-button style="margin-left: 8px"> 批量操作 
           <a-icon type="down" />

@@ -83,7 +83,7 @@ spring:
         timeBetweenEvictionRunsMillis: 60000
         # 配置一个连接在池中最小生存的时间，单位是毫秒
         minEvictableIdleTimeMillis: 300000
-        validationQuery: SELECT 1 FROM DUAL
+        validationQuery: SELECT 1
         testWhileIdle: true
         testOnBorrow: false
         testOnReturn: false
@@ -101,11 +101,11 @@ spring:
           password: zxasqw12
           driver-class-name: com.mysql.jdbc.Driver
           # 多数据源配置
-          #multi-datasource1:
-          #url: jdbc:mysql://localhost:3306/jeecg-boot2?useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true
-          #username: root
-          #password: root
-          #driver-class-name: com.mysql.jdbc.Driver
+        kindeeDS:
+          url: jdbc:sqlserver://192.168.3.251:1433;DatabaseName=AIS201901021455161
+          username: sa
+          password: 123
+          driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   #redis 配置
   redis:
     database: 0

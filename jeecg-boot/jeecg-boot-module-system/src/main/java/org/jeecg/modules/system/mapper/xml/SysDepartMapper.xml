@@ -29,8 +29,8 @@
     <!--根据部门编码获取我的部门下所有部门ids -->
     <select id="getSubDepIdsByOrgCodes" resultType="java.lang.String">
 		select id from sys_depart where del_flag = '0' and
-        <foreach collection="orgCodes" item="item" index="index"  open="(" separator="or" close=")">
-            org_code LIKE CONCAT(#{item},'%')
+        <foreach collection="orgCodes" item="org.jit.item" index="index"  open="(" separator="or" close=")">
+            org_code LIKE CONCAT(#{org.jit.item},'%')
         </foreach>
 	</select>
 

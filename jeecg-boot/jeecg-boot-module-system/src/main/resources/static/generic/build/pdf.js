@@ -1785,9 +1785,9 @@ PDFJS.openExternalLinksInNewWindow = (
 
 /**
  * @typedef {Object} PDFDocumentStats
- * @property {Array} streamTypes - Used stream types in the document (an item
+ * @property {Array} streamTypes - Used stream types in the document (an org.jit.item
  *   is set to true if specific stream ID was used in the document).
- * @property {Array} fontTypes - Used font type in the document (an item is set
+ * @property {Array} fontTypes - Used font type in the document (an org.jit.item is set
  *   to true if specific font ID was used in the document).
  */
 

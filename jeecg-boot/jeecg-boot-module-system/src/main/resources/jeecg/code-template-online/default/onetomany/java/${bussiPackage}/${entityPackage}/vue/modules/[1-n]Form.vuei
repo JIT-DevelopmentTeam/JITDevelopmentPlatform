@@ -23,10 +23,10 @@
 	</#if>
 	<#if po.classType =='textarea'>
         <a-col :span="24">
-          <a-form-item label="${po.filedComment}" :labelCol="labelCol2" :wrapperCol="wrapperCol2">
+          <a-form-org.jit.item label="${po.filedComment}" :labelCol="labelCol2" :wrapperCol="wrapperCol2">
 	<#else>
         <a-col :span="12">
-          <a-form-item label="${po.filedComment}" :labelCol="labelCol" :wrapperCol="wrapperCol">
+          <a-form-org.jit.item label="${po.filedComment}" :labelCol="labelCol" :wrapperCol="wrapperCol">
 	</#if>
 	<#if po.classType =='date'>
 		<#assign form_date=true>
@@ -65,7 +65,7 @@
 	<#else>
             <a-input v-decorator="[ '${po.fieldName}', validatorRules.${po.fieldName}]" placeholder="请输入${po.filedComment}"></a-input>
     </#if>
-          </a-form-item>
+          </a-form-org.jit.item>
         </a-col>
 </#if>
 </#list>    

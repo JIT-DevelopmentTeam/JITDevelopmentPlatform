@@ -11,7 +11,7 @@
       <a-form :form="form">
 		<#list columns as po><#rt/>
         <#if po.fieldName !='id'><#rt/>
-        <a-form-item
+        <a-form-org.jit.item
           :labelCol="labelCol"
           :wrapperCol="wrapperCol"
           label="${po.filedComment}">
@@ -24,7 +24,7 @@
           <#else>
           <a-input placeholder="请输入${po.filedComment}" v-decorator="['${po.fieldName}', <#if po.nullable =='N'>validatorRules.${po.fieldName} <#else>{}</#if>]" />
           </#if>
-        </a-form-item>
+        </a-form-org.jit.item>
         </#if>
         </#list>
       </a-form>
@@ -151,17 +151,17 @@
     margin-left: 3px;
   }
 
-  .ant-form-item-control {
+  .ant-form-org.jit.item-control {
     line-height: 0px;
   }
 
   /** 主表单行间距 */
-  .ant-form .ant-form-item {
+  .ant-form .ant-form-org.jit.item {
     margin-bottom: 10px;
   }
 
   /** Tab页面行间距 */
-  .ant-tabs-content .ant-form-item {
+  .ant-tabs-content .ant-form-org.jit.item {
     margin-bottom: 0px;
   }
 </style>
